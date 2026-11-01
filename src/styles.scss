@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+//@use 'styles/responsive';
+
+body {
+  margin: 0;
+  background: #000;
+
+  /* Define the scrollbar style */
+  &::-webkit-scrollbar {
+    width: .5rem;
+    height: .5rem;
+    background: transparent;
+  }
+
+  /* Define the thumb style */
+  &::-webkit-scrollbar-thumb {
+    border-radius: .3rem;
+    background: #FFF;
+  }
+
+  /* Define the track style */
+  &::-webkit-scrollbar-track {
+    //display: none;
+    background: #000;
+  }
+
+  /* Define the button style */
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+html {
+  font-size: 10px;
+  font-family: Source Sans Pro, system-ui, -apple-system, Segoe UI, roboto, ubuntu, cantarell, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+p {
+  margin: 0;
+  color: #FFF;
+}
+
+label {
+  color: #FFF;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.bmfBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  margin: 0;
+  touch-action: manipulation;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.4rem;
+  line-height: 120%;
+  border-radius: .4rem;
+  user-select: none;
+  color: white;
+  font-weight: 700;
+  background: #073874;
+  overflow: hidden;
+
+  border: none;
+
+  &:hover {
+    background: darken(#073874, 10%);
+  }
+}
+
+
+
+
+
+
+
+// positions
+
+@mixin centerVertically {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin centerHorizontally {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+@mixin centerOnPage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
